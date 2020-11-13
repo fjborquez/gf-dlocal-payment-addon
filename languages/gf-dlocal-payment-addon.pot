@@ -1,0 +1,199 @@
+# Copyright (C) 2020 Francisco Bórquez
+# This file is distributed under the same license as the Gravity Forms DLocal Payment Addon plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: Gravity Forms DLocal Payment Addon 1.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/gf-dlocal-payment-addon\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2020-11-03T02:30:08+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.4.0\n"
+"X-Domain: gf-dlocal-payment-addon\n"
+
+#. Plugin Name of the plugin
+msgid "Gravity Forms DLocal Payment Addon"
+msgstr ""
+
+#. Plugin URI of the plugin
+#. Author URI of the plugin
+msgid "AGREGAR"
+msgstr ""
+
+#. Description of the plugin
+msgid "Integrates DLocal Payment with Gravity Forms."
+msgstr ""
+
+#. Author of the plugin
+msgid "Francisco Bórquez"
+msgstr ""
+
+#: class-gf-dlocal-payment-addon.php:37
+#: class-gf-dlocal-payment-addon.php:144
+msgid "Currency"
+msgstr ""
+
+#: class-gf-dlocal-payment-addon.php:43
+#: class-gf-dlocal-payment-addon.php:145
+msgid "Payment Method"
+msgstr ""
+
+#: class-gf-dlocal-payment-addon.php:49
+#: class-gf-dlocal-payment-addon.php:146
+msgid "Payment Method Flow"
+msgstr ""
+
+#: class-gf-dlocal-payment-addon.php:55
+#: class-gf-dlocal-payment-addon.php:147
+msgid "Payer Name"
+msgstr ""
+
+#: class-gf-dlocal-payment-addon.php:61
+#: class-gf-dlocal-payment-addon.php:148
+msgid "Payer Document"
+msgstr ""
+
+#: class-gf-dlocal-payment-addon.php:76
+#: class-gf-dlocal-payment-addon.php:80
+msgid "X-Login"
+msgstr ""
+
+#: class-gf-dlocal-payment-addon.php:80
+#: class-gf-dlocal-payment-addon.php:88
+#: class-gf-dlocal-payment-addon.php:96
+#: class-gf-dlocal-payment-addon.php:104
+msgid "Get this value from your DLocal account."
+msgstr ""
+
+#: class-gf-dlocal-payment-addon.php:84
+#: class-gf-dlocal-payment-addon.php:88
+msgid "X-Version"
+msgstr ""
+
+#: class-gf-dlocal-payment-addon.php:92
+#: class-gf-dlocal-payment-addon.php:96
+msgid "X-Trans-Key"
+msgstr ""
+
+#: class-gf-dlocal-payment-addon.php:100
+#: class-gf-dlocal-payment-addon.php:104
+msgid "Secret Key"
+msgstr ""
+
+#: class-gf-dlocal-payment-addon.php:108
+#: class-gf-dlocal-payment-addon.php:117
+msgid "Sandbox"
+msgstr ""
+
+#: class-gf-dlocal-payment-addon.php:112
+msgid "Active"
+msgstr ""
+
+#: class-gf-dlocal-payment-addon.php:117
+msgid "Checked to activate DLocal sandbox mode."
+msgstr ""
+
+#: class-gf-dlocal-payment-addon.php:121
+#: class-gf-dlocal-payment-addon.php:125
+msgid "Notification URL"
+msgstr ""
+
+#: class-gf-dlocal-payment-addon.php:125
+msgid "This is the URL to which DLocal will notify changes in a payment."
+msgstr ""
+
+#: class-gf-dlocal-payment-addon.php:129
+#: class-gf-dlocal-payment-addon.php:133
+msgid "Error Page URL"
+msgstr ""
+
+#: class-gf-dlocal-payment-addon.php:133
+msgid "This is the page you will redirect to when a payment error occurs. A get parameter will be added with an error message."
+msgstr ""
+
+#: class-gf-dlocal-payment-addon.php:262
+msgid "Argentine Peso"
+msgstr ""
+
+#: class-gf-dlocal-payment-addon.php:267
+msgid "Bolivian Boliviano"
+msgstr ""
+
+#: class-gf-dlocal-payment-addon.php:272
+msgid "Brazilian Real"
+msgstr ""
+
+#: class-gf-dlocal-payment-addon.php:277
+msgid "Central African CFA franc"
+msgstr ""
+
+#: class-gf-dlocal-payment-addon.php:282
+msgid "Chilean Peso"
+msgstr ""
+
+#: class-gf-dlocal-payment-addon.php:287
+msgid "Chinese Yuan"
+msgstr ""
+
+#: class-gf-dlocal-payment-addon.php:292
+msgid "Colombian Peso"
+msgstr ""
+
+#: class-gf-dlocal-payment-addon.php:297
+msgid "Colón"
+msgstr ""
+
+#: class-gf-dlocal-payment-addon.php:302
+msgid "Egyptian Pound"
+msgstr ""
+
+#: class-gf-dlocal-payment-addon.php:307
+msgid "Indian Rupee"
+msgstr ""
+
+#: class-gf-dlocal-payment-addon.php:312
+msgid "Indonesian Rupiah"
+msgstr ""
+
+#: class-gf-dlocal-payment-addon.php:317
+msgid "Mexican Peso"
+msgstr ""
+
+#: class-gf-dlocal-payment-addon.php:322
+msgid "Moroccan Dirham"
+msgstr ""
+
+#: class-gf-dlocal-payment-addon.php:327
+msgid "Nigerian Naira"
+msgstr ""
+
+#: class-gf-dlocal-payment-addon.php:332
+msgid "Paraguayan Guaraní"
+msgstr ""
+
+#: class-gf-dlocal-payment-addon.php:337
+msgid "Peruvian Sol"
+msgstr ""
+
+#: class-gf-dlocal-payment-addon.php:342
+msgid "South African Rand"
+msgstr ""
+
+#: class-gf-dlocal-payment-addon.php:347
+msgid "Turkish Lira"
+msgstr ""
+
+#: class-gf-dlocal-payment-addon.php:352
+msgid "Uruguayan Peso"
+msgstr ""
+
+#: class-gf-dlocal-payment-addon.php:362
+msgid "Currencies"
+msgstr ""
+
+#: class-gf-dlocal-payment-addon.php:371
+msgid "DLocal Payment Methods"
+msgstr ""
