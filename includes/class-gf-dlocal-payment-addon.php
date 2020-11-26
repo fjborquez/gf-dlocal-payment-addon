@@ -194,13 +194,13 @@ class GFDLocalPaymentAddon extends GFPaymentAddOn {
 		
 		if ($response instanceof WP_Error) {
 			if ($dlocalErrorPageUrl) {
-				return $dlocalErrorPageUrl . "/?error=0000 - Can't connect to DLocal service";
+				return $dlocalErrorPageUrl . "/?errMes=0000 - Can't connect to DLocal service";
 			}
 		} else {
 			$responseBody = json_decode($response['body']);
 			if (isset($responseBody->code)) {
 				if ($dlocalErrorPageUrl) {
-					return $dlocalErrorPageUrl . "/?error=" . $responseBody->code . " - " . $responseBody->message;
+					return $dlocalErrorPageUrl . "/?errMes=" . $responseBody->code . " - " . $responseBody->message;
 				}
 			} else {
 				if (isset($responseBody->redirect_url)) {
