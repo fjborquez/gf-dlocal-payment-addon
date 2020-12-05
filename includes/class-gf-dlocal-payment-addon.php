@@ -109,6 +109,7 @@ class GFDLocalPaymentAddon extends GFPaymentAddOn {
 		$fields[] = array( 'name' => 'dlocalPayerName', 'label' => esc_html__( 'Payer Name', 'gf-dlocal-payment-addon'), 'required' => true );
 		$fields[] = array( 'name' => 'dlocalPayerDocument', 'label' => esc_html__( 'Payer Document', 'gf-dlocal-payment-addon'), 'required' => true );
 		$fields[] = array( 'name' => 'dlocalPayerUserReference', 'label' => esc_html__( 'Payer User Reference', 'gf-dlocal-payment-addon'), 'required' => false );
+		$fields[] = array( 'name' => 'dlocalPayerDeviceId', 'label' => esc_html__( 'Payer Device ID', 'gf-dlocal-payment-addon'), 'required' => false );
 
 		return $fields;
 	}
@@ -142,6 +143,7 @@ class GFDLocalPaymentAddon extends GFPaymentAddOn {
 		$payer_addres_street = rgar($submission_data, 'address');
 		$payer_addres_number = rgar($submission_data, 'address2');
 		$payer_user_reference = rgar($submission_data, 'dlocalPayerUserReference');
+		$payer_user_device_id = rgar($submission_data, 'dlocalPayerDeviceId');
 
 		$body = '{
 			"amount": "' . $amount .'",
@@ -161,7 +163,8 @@ class GFDLocalPaymentAddon extends GFPaymentAddOn {
 					"street" : "' . $payer_addres_street  . '",
 					"number" : "' . $payer_addres_number . '"
 				},
-				"ip": "' . $this->get_the_user_ip() . '"
+				"ip": "' . $this->get_the_user_ip() . '",
+				"device_id": "' . $payer_user_device_id . '"
 			},
 			"order_id": ' . rgar($entry, 'id') . ',
 			"notification_url": "' . rgar($meta, 'dlocalNotificationUrl') . '"
