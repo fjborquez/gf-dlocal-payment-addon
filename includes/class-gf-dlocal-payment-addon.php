@@ -108,6 +108,7 @@ class GFDLocalPaymentAddon extends GFPaymentAddOn {
 		$fields[] = array( 'name' => 'dlocalPaymentMethodFlow', 'label' => esc_html__( 'Payment Method Flow', 'gf-dlocal-payment-addon'), 'required' => true );
 		$fields[] = array( 'name' => 'dlocalPayerName', 'label' => esc_html__( 'Payer Name', 'gf-dlocal-payment-addon'), 'required' => true );
 		$fields[] = array( 'name' => 'dlocalPayerDocument', 'label' => esc_html__( 'Payer Document', 'gf-dlocal-payment-addon'), 'required' => true );
+		$fields[] = array( 'name' => 'dlocalPayerUserReference', 'label' => esc_html__( 'Payer User Reference', 'gf-dlocal-payment-addon'), 'required' => false );
 
 		return $fields;
 	}
@@ -140,6 +141,7 @@ class GFDLocalPaymentAddon extends GFPaymentAddOn {
 		$payer_addres_zip_code = rgar($submission_data, 'zip');
 		$payer_addres_street = rgar($submission_data, 'address');
 		$payer_addres_number = rgar($submission_data, 'address2');
+		$payer_user_reference = rgar($submission_data, 'dlocalPayerUserReference');
 
 		$body = '{
 			"amount": "' . $amount .'",
@@ -150,7 +152,7 @@ class GFDLocalPaymentAddon extends GFPaymentAddOn {
 			"payer":{
 				"name" : "' . $payer_name . '",
 				"email" : "' . $payer_email . '",
-				"user_reference": "12345",
+				"user_reference": "' . $payer_user_reference . '",
 				"document": "' . $payer_document . '",
 				"address": {
 					"state"  : "' . $payer_addres_state . '",
