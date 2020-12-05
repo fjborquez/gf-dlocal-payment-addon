@@ -158,7 +158,8 @@ class GFDLocalPaymentAddon extends GFPaymentAddOn {
 					"zip_code" : "' . $payer_addres_zip_code . '",
 					"street" : "' . $payer_addres_street  . '",
 					"number" : "' . $payer_addres_number . '"
-				}
+				},
+				"ip": "' . $this->get_the_user_ip() . '"
 			},
 			"order_id": ' . rgar($entry, 'id') . ',
 			"notification_url": "' . rgar($meta, 'dlocalNotificationUrl') . '"
@@ -250,5 +251,21 @@ class GFDLocalPaymentAddon extends GFPaymentAddOn {
 		}
 
 		return $gf_status;
+	}
+
+	public function get_the_user_ip() {
+		$ip = '';
+
+		if (!empty($_SERVER['HTTP_CLIENT_IP'])) {
+			//check ip from share internet
+			$ip = $_SERVER['HTTP_CLIENT_IP'];
+		} elseif (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) {
+			//to check ip is pass from proxy
+			$ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
+		} else {
+			$ip = $_SERVER['REMOTE_ADDR'];
+		}
+
+		return $ip;
 	}
 }
