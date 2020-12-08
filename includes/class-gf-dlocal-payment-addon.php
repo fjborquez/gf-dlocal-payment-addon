@@ -166,7 +166,7 @@ class GFDLocalPaymentAddon extends GFPaymentAddOn {
 				"ip": "' . $this->get_the_user_ip() . '",
 				"device_id": "' . $payer_user_device_id . '"
 			},
-			"order_id": ' . rgar($entry, 'id') . ',
+			"order_id": "' . rgar($entry, 'id') . '",
 			"notification_url": "' . rgar($meta, 'dlocalNotificationUrl') . '"
 		}';
 
