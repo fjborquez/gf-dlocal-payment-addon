@@ -146,7 +146,7 @@ class GFDLocalPaymentAddon extends GFPaymentAddOn {
 		$payer_user_device_id = rgar($submission_data, 'dlocalPayerDeviceId');
 
 		$body = '{
-			"amount": "' . $amount .'",
+			"amount": ' . $amount .',
 			"currency": "' . $currency .'",
 			"country": "' . $country . '",
 			"payment_method_id" : "' . $payment_method_id . '",
